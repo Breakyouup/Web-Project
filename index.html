@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>牟盛昊 | 个人主页</title>
+  <meta name="description" content="牟盛昊的个人主页 —— 在校大学生，热爱 Web 前端开发。" />
+
+  <!-- 在浏览器标签页上显示一个小图标（内嵌 SVG，不需要额外图片文件） -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='78' font-size='80'>🌈</text></svg>" />
+
+  <!-- 样式表：所有视觉相关的代码都在这里 -->
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+<!-- ===================== 背景装饰层 ===================== -->
+<div class="bg-layer" aria-hidden="true">
+  <div class="blob b1"></div><div class="blob b2"></div><div class="blob b3"></div>
+  <div class="blob b4"></div><div class="blob b5"></div><div class="blob b6"></div>
+  <div class="bg-grid"></div>
+</div>
+<div class="cursor-glow" id="glow" aria-hidden="true"></div>
+
+<!-- 顶部彩虹滚动进度条 -->
+<div class="progress" id="progress"></div>
+
+<!-- ===================== 导航栏 ===================== -->
+<header class="nav" id="nav">
+  <a class="brand" href="#hero"><i class="dot"></i><span>牟盛昊</span></a>
+  <button class="nav-toggle" id="navToggle" aria-label="展开菜单" aria-expanded="false">☰</button>
+  <nav class="menu" id="menu">
+    <a href="#hero">首页</a>
+    <a href="#about">关于我</a>
+    <a href="#skills">技能</a>
+    <a href="#journey">学习历程</a>
+    <a href="#contact">联系我</a>
+  </nav>
+</header>
+
+<main>
+
+  <!-- ===================== 首屏 Hero ===================== -->
+  <section id="hero">
+    <div class="wrap">
+
+      <!-- 头像：把 <span>牟</span> 换成 <img src="images/avatar.jpg" alt="头像"> 就能用真人照片 -->
+      <div class="avatar-ring reveal">
+        <div class="avatar"><span>牟</span></div>
+      </div>
+
+      <h1 class="hero-name grad reveal d1">牟盛昊</h1>
+
+      <!-- 身份标签 -->
+      <div class="hero-role reveal d2">
+        <span class="tag t1">🎓 在校大学生</span>
+        <span class="tag t2">💻 Web 前端</span>
+        <span class="tag t3">📘 前端技术课程作业</span>
+        <span class="tag t4">🎨 热爱设计</span>
+        <span class="tag t5">🚀 持续学习中</span>
+      </div>
+
+      <!-- 打字机文字（内容在 js/main.js 的 phrases 数组里） -->
+      <p class="typed reveal d2"><span id="typedText"></span><span class="caret"></span></p>
+
+      <div class="hero-cta reveal d3">
+        <a class="btn btn-primary" href="#about">认识我一下 →</a>
+        <a class="btn btn-ghost" href="#skills">看看我的技能</a>
+      </div>
+
+      <!-- 数据统计：改 data-count（目标数字）和 data-suffix（后缀） -->
+      <div class="stats reveal d4">
+        <div class="stat glass"><b data-count="1000" data-suffix="+">0</b><small>代码行数</small></div>
+        <div class="stat glass"><b data-count="15" data-suffix="+">0</b><small>练习项目</small></div>
+        <div class="stat glass"><b data-count="8" data-suffix=" 门">0</b><small>在修课程</small></div>
+        <div class="stat glass"><b data-count="99" data-suffix="%">0</b><small>学习热情</small></div>
+      </div>
+
+      <div class="scroll-hint reveal d4">
+        <div class="mouse"></div>
+        SCROLL
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== 关于我 ===================== -->
+  <section id="about">
+    <div class="wrap">
+      <span class="eyebrow reveal"><i></i>About Me</span>
+      <h2 class="title reveal d1">你好，我是 <span class="grad">牟盛昊</span></h2>
+      <p class="lead reveal d2">一名在校大学生，正在系统学习 Web 前端开发，喜欢把想法用浏览器里的像素和动画表达出来。</p>
+
+      <div class="about">
+        <!-- 左侧：自我介绍正文，改成你自己的话 -->
+        <div class="about-card glass reveal d2">
+          <p>我是一名普通但在努力的<strong>大学生</strong>。从 HTML 结构、CSS 布局到 JavaScript 交互，我一路把课本上的知识点变成了一个个能在浏览器里点得动、看得见的页面。</p>
+          <p>我着迷于「写几行代码，界面就活起来」这件事——一个渐变色、一次过渡动画、一段顺滑的滚动，都能让我反复调试很久并乐在其中。</p>
+          <p>现在这份主页就是我 <strong>Web 前端技术课程</strong>的一次实践作业：从配色方案、栅格布局到交互动效，全部手写完成，没有使用任何前端框架。</p>
+          <p>下一步，我想深入 <strong>响应式布局、CSS 动画与组件化思维</strong>，把页面做得既好看又好用。</p>
+        </div>
+
+        <!-- 右侧：四个小信息卡 -->
+        <div class="facts">
+          <div class="fact glass reveal d1">
+            <div class="ico">🎓</div>
+            <div><h4>在读大学生</h4><p>计算机 / 信息技术相关方向</p></div>
+          </div>
+          <div class="fact glass reveal d2">
+            <div class="ico">📚</div>
+            <div><h4>正在修的课</h4><p>Web 前端技术 · 程序设计 · 数据库基础</p></div>
+          </div>
+          <div class="fact glass reveal d3">
+            <div class="ico">🎯</div>
+            <div><h4>短期目标</h4><p>独立完成一个多页面响应式网站</p></div>
+          </div>
+          <div class="fact glass reveal d4">
+            <div class="ico">🌏</div>
+            <div><h4>坐标</h4><p>中国 · 校园里的某个自习室</p></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== 技能 ===================== -->
+  <section id="skills">
+    <div class="wrap">
+      <span class="eyebrow reveal"><i></i>Skills</span>
+      <h2 class="title reveal d1">我的 <span class="grad">技能地图</span></h2>
+      <p class="lead reveal d2">以下进度条代表我当前的自评水平——不吹牛，也还在涨。</p>
+
+      <!-- 进度条：改 style="--pct:90%" 里的数字即可，记得同步改 <em> 里的百分比文字 -->
+      <div class="skills">
+        <div class="skill reveal" style="--pct:90%">
+          <div class="top"><span>HTML5 语义化结构</span><em>90%</em></div>
+          <div class="bar"><i></i></div>
+        </div>
+        <div class="skill reveal d1" style="--pct:85%">
+          <div class="top"><span>CSS3 / 弹性与网格布局</span><em>85%</em></div>
+          <div class="bar"><i></i></div>
+        </div>
+        <div class="skill reveal d2" style="--pct:72%">
+          <div class="top"><span>JavaScript 基础交互</span><em>72%</em></div>
+          <div class="bar"><i></i></div>
+        </div>
+        <div class="skill reveal d1" style="--pct:80%">
+          <div class="top"><span>响应式与移动端适配</span><em>80%</em></div>
+          <div class="bar"><i></i></div>
+        </div>
+        <div class="skill reveal d2" style="--pct:76%">
+          <div class="top"><span>UI 配色与视觉设计</span><em>76%</em></div>
+          <div class="bar"><i></i></div>
+        </div>
+        <div class="skill reveal d3" style="--pct:65%">
+          <div class="top"><span>Git 版本管理</span><em>65%</em></div>
+          <div class="bar"><i></i></div>
+        </div>
+      </div>
+
+      <!-- 六张能力卡片：c1~c6 控制角标配色，想加卡片就复制一整段并改 c 编号 -->
+      <div class="cards">
+        <div class="card glass c1 reveal">
+          <div class="badge">🧱</div>
+          <h3>结构先行</h3>
+          <p>用语义化标签搭建清晰的页面骨架，让内容和样式各司其职。</p>
+          <div class="chips"><span class="chip">HTML5</span><span class="chip">语义化</span><span class="chip">表单</span></div>
+        </div>
+        <div class="card glass c2 reveal d1">
+          <div class="badge">🎨</div>
+          <h3>样式与色彩</h3>
+          <p>渐变、阴影、玻璃拟态、自定义属性，把配色系统化地管理起来。</p>
+          <div class="chips"><span class="chip">CSS3</span><span class="chip">渐变</span><span class="chip">变量</span></div>
+        </div>
+        <div class="card glass c3 reveal d2">
+          <div class="badge">📐</div>
+          <h3>布局能力</h3>
+          <p>Flexbox 与 Grid 组合出稳定的多栏结构，并适配各种屏幕宽度。</p>
+          <div class="chips"><span class="chip">Flexbox</span><span class="chip">Grid</span><span class="chip">媒体查询</span></div>
+        </div>
+        <div class="card glass c4 reveal d1">
+          <div class="badge">⚡</div>
+          <h3>交互逻辑</h3>
+          <p>原生 JS 实现导航、打字机、数字滚动与滚动监听等交互效果。</p>
+          <div class="chips"><span class="chip">ES6</span><span class="chip">DOM</span><span class="chip">事件</span></div>
+        </div>
+        <div class="card glass c5 reveal d2">
+          <div class="badge">✨</div>
+          <h3>动效设计</h3>
+          <p>用关键帧动画与过渡曲线，让页面在滚动和悬停时自然呼吸。</p>
+          <div class="chips"><span class="chip">Keyframes</span><span class="chip">Transform</span><span class="chip">Intersection</span></div>
+        </div>
+        <div class="card glass c6 reveal d3">
+          <div class="badge">🧰</div>
+          <h3>工具协作</h3>
+          <p>浏览器开发者工具调试、Git 提交记录，一点点养成工程习惯。</p>
+          <div class="chips"><span class="chip">DevTools</span><span class="chip">Git</span><span class="chip">VS Code</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== 学习历程 ===================== -->
+  <section id="journey">
+    <div class="wrap">
+      <span class="eyebrow reveal"><i></i>Journey</span>
+      <h2 class="title reveal d1">我的 <span class="grad">学习历程</span></h2>
+      <p class="lead reveal d2">从第一次打出 <code>&lt;h1&gt;</code> 到现在，一步步走过来的路。</p>
+
+      <div class="timeline">
+        <div class="tl-item reveal">
+          <div class="tl-date">第一阶段</div>
+          <h3>敲开网页的门</h3>
+          <p>认识标签、写第一个 HTML 页面，第一次在浏览器里看到自己的文字被渲染出来，那种感觉挺奇妙。</p>
+        </div>
+        <div class="tl-item reveal d1">
+          <div class="tl-date">第二阶段</div>
+          <h3>沉迷于布局与配色</h3>
+          <p>被 CSS 折磨也被 CSS 治愈。学会了盒模型、Flex 布局和渐变色，开始给页面「化妆」。</p>
+        </div>
+        <div class="tl-item reveal d2">
+          <div class="tl-date">第三阶段</div>
+          <h3>让页面动起来</h3>
+          <p>接触 JavaScript，用 DOM 操作和事件监听做出下拉菜单、轮播图，页面终于能响应我的操作了。</p>
+        </div>
+        <div class="tl-item reveal d3">
+          <div class="tl-date">现在</div>
+          <h3>完成这份课程作业</h3>
+          <p>把学到的知识点整合成一个完整的个人主页：多色渐变、玻璃卡片、滚动动效，全部手写、零框架。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== 联系我 ===================== -->
+  <section id="contact">
+    <div class="wrap">
+      <span class="eyebrow reveal"><i></i>Contact</span>
+      <h2 class="title reveal d1">一起聊聊 <span class="grad">前端</span> 吧</h2>
+
+      <div class="contact-box glass reveal d2">
+        <p class="lead" style="margin:0 auto;">欢迎和我交流学习心得、课程作业思路，或者单纯交个朋友。<br />邮箱与社交账号请在下方替换成你自己的信息 👇</p>
+
+        <!-- 联系方式：href 改成你的真实地址；<span class="d"> 是前面的彩色小圆点 -->
+        <div class="contacts">
+          <a class="contact-link" href="mailto:moushenghao@example.com">
+            <span class="d" style="background:var(--c-pink);box-shadow:0 0 10px var(--c-pink)"></span>moushenghao@example.com
+          </a>
+          <a class="contact-link" href="#">
+            <span class="d" style="background:var(--c-amber);box-shadow:0 0 10px var(--c-amber)"></span>GitHub
+          </a>
+          <a class="contact-link" href="#">
+            <span class="d" style="background:var(--c-cyan);box-shadow:0 0 10px var(--c-cyan)"></span>微信：请替换
+          </a>
+          <a class="contact-link" href="#">
+            <span class="d" style="background:var(--c-violet);box-shadow:0 0 10px var(--c-violet)"></span>QQ：请替换
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ===================== 页脚 ===================== -->
+<footer>
+  <div class="rain"></div>
+  <p>© <span id="year"></span> <b>牟盛昊</b> · 个人主页 · Web 前端技术课程作业</p>
+  <p style="margin-top:6px;opacity:.75">HTML5 + CSS3 + 原生 JavaScript 手写完成，未使用任何框架与外部资源。</p>
+</footer>
+
+<!-- 返回顶部按钮 -->
+<button class="to-top" id="toTop" aria-label="返回顶部">↑</button>
+
+<!-- 交互脚本放在 body 末尾，保证元素都已存在 -->
+<script src="js/main.js"></script>
+</body>
+</html>
